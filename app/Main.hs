@@ -63,4 +63,4 @@ add :: Arr.Arrow a => a Int Int -> a Int Int -> a Int Int
 add f g = f Arr.&&& g Cat.>>> Arr.arr (uncurry (+))
 
 main :: IO ()
-main = print $ let ST f = add (Cat.id) (Arr.arr (* 2)) in f (0, 5)
+main = print $ let ST f = add Cat.id (Arr.arr (* 2)) in f (0, 5)
