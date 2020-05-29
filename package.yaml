@@ -21,9 +21,7 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
-
-library:
-  source-dirs: src
+- ghc-prim == 0.5.3
 
 executables:
   arrow-sample-exe:
@@ -33,8 +31,6 @@ executables:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
-    dependencies:
-    - arrow-sample
 
 tests:
   arrow-sample-test:
@@ -44,5 +40,3 @@ tests:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
-    dependencies:
-    - arrow-sample
